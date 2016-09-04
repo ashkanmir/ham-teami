@@ -1,2 +1,22 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<% provide(:title, 'عضویت') %>
+<h1 style="margin-top: 40px;">میخوام هم تیمی پیدا کنم</h1>
+
+<div class="row form-group">
+  <div class="col-sm-4 col-sm-offset-4">
+    <%= form_for(@user) do |f| %>
+      <% f.label :name %>
+      <%= f.text_field :name, placeholder: "اسم" %>
+
+      <% f.label :email %>
+      <%= f.email_field :email, placeholder: "ایمیل" %>
+
+      <% f.label :password %>
+      <%= f.password_field :password, placeholder: "رمز عبور" %>
+
+      <%  f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation, placeholder: "رمز عبور" %>
+
+      <%= f.submit "ثبت نام", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
