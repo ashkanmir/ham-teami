@@ -1,0 +1,148 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+/*fonts
+
+@font-face {
+font-family: 'BYekan';
+src: url('assets/BYekan.eot');
+src: local('*'),
+url('assets/BYekan.woff')format('woff'),
+url('assets/BYekan.ttf')format('truetype'),
+url('assets/BYekan.svg') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+  font-family:"BYekan";
+  src:url("assets/fonts/BYekan.eot?") format("eot"),
+  url("assets/fonts/BYekan.woff") format("woff"),
+  url("assets/fonts/BYekan.ttf") format("truetype"),
+  url("assets/fonts/BYekan.svg#BYekan") format("svg");
+  font-weight:normal;
+  font-style:normal;
+}*/
+
+/* universal */
+body{
+    font-family: "verdana";
+    letter-spacing: 0px;
+    padding-top: 50px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+} 
+
+p {
+  font-size: 2.1em;
+  line-height: 1.7em;
+  text-align: center;
+} 
+
+/*#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #A0A0A0;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: none;
+}
+
+#logo:hover {
+  color: #A0A0A0;
+  text-decoration: none;
+}*/
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 2px;
+  font-weight: none;
+  height: 95;
+  width: 125;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer medium {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+/* homepgae backgound
+
+#bg{
+  background-image: url("/assets/bg.jpg");
+  width: auto\9; 
+  height: 500px;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+}*/
+

@@ -5,10 +5,17 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
+  <link rel="icon" type="image/png" href="http://i64.tinypic.com/dcve2p.png">
 </head>
 <body>
-
-<%= yield %>
-
+  <%= render 'layouts/header' %>
+  <div>
+    <%= yield %>
+  </div>
+  <div class="container">
+    <%= render 'layouts/footer' %>
+    </div>
+  
 </body>
 </html>
