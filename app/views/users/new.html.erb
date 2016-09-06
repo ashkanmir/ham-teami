@@ -1,24 +1,49 @@
 <% provide(:title, 'عضویت') %>
-<h1 style="margin-top: 40px;">میخوام هم تیمی پیدا کنم</h1>
+<div id="sn">
+<h1 style="margin: 40px 0 20px 0;">میخوام هم تیمی پیدا کنم</h1>
 
 <div class="row form-group">
   <div class="col-sm-4 col-sm-offset-4">
-    <%= form_for(@user) do |f| %>
+    <%= form_for(@user, url: signup_path) do |f| %>
+    <%= render 'shared/error_messages' %>
+    
+    
       <% f.label :name %>
       <i class="glyphicon glyphicon-user"></i>
-      <%= f.text_field :name, placeholder: "اسم" %>
+      <%= f.text_field :name, placeholder: "اسم", class: 'form-control' %>
 
       <% f.label :email %>
       <i class="glyphicon glyphicon-envelope"></i>
-      <%= f.email_field :email, placeholder: "ایمیل" %>
+      <%= f.email_field :email, placeholder: "ایمیل", class: 'form-control' %>
+      
+      <% f.label :city %>
+      <i class="glyphicon glyphicon-home"></i>
+      <%= f.text_field :city, placeholder: "شهر", class: 'form-control' %>
+      
+      <% f.label :work %>
+      <i class="glyphicon glyphicon-bookmark"></i>
+      <%= f.text_field :work, placeholder: "سرمایه گذار٫ برنامه نویس٫ مارکتر٫ طراح یا ....... ", class: 'form-control' %>
+      
+      
+      <% f.label :exp %>
+      <i class="glyphicon glyphicon-ok-sign"></i>      
+      <%= f.text_field :exp, placeholder: "سابقه استارتاپی داری؟ (آره \ نه)", class: 'form-control' %>
+      
+      
+      <% f.label :about %>
+      <i class="glyphicon glyphicon-comment"></i>
+      <%= text_area(:user, :about, placeholder: "برنامه نویسی: مجرب در برنامه نویسی #C به روش OOP
+مستند سازی با استفاده از UML و آشنا با Net.ASP و Java.................")%>
+<%=  %>
 
       <% f.label :password %>
-      <%= f.password_field :password, placeholder: "رمز عبور" %>
+      <%= f.password_field :password, placeholder: "رمز عبور", class: 'form-control' %>
 
       <%  f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation, placeholder: "رمز عبور" %>
+      <%= f.password_field :password_confirmation, placeholder: "رمز عبور", class: 'form-control' %>
 
       <%= f.submit "ثبت نام", class: "btn btn-primary" %>
     <% end %>
   </div>
+</div>
 </div>

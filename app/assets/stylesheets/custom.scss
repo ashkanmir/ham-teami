@@ -12,7 +12,7 @@ $gray-medium-light: #eaeaea;
 }
 
 
-/*fonts
+/*fonts*/
 
 @font-face {
 font-family: 'BYekan';
@@ -33,11 +33,12 @@ font-style: normal;
   url("assets/fonts/BYekan.svg#BYekan") format("svg");
   font-weight:normal;
   font-style:normal;
-}*/
+}
 
 /* universal */
 body{
-    font-family: "verdana";
+  
+    font-family:sans-serif;
     letter-spacing: 0px;
     padding-top: 50px;
 }
@@ -145,17 +146,21 @@ footer ul li {
   margin-left: 15px;
 }
 
-/* homepgae backgound
+/* homepgae backgound*/
 
 #bg{
-  background-image: url("/assets/bg.jpg");
-  width: auto\9; 
-  height: 500px;
-  background-repeat: no-repeat;
-  max-width: 100%;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("/assets/bg.jpg");
+  height:400px;
+  width: 100%;
+  background-size: cover;
+  
+}
+
+#toprow{
+  margin-top: 170px;
+  text-align: center;
   vertical-align: middle;
-  border: 0;
-}*/
+}
 
 /*below pic*/
 
@@ -195,15 +200,39 @@ aside {
 /* forms */
 
 input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
+  padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 input {
   height: auto !important;
 }
+
+
+#error_explanation {
+  color: red;
+  }
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+
+
+.field_with_errors {
+  @extend .has-error;
+  }
+  
+  .form-control {
+    color: $state-danger-text;
+  }
+
 
 /*about*/
 
@@ -214,3 +243,4 @@ input {
   border-radius: 5%;
   padding: 10px;
 }
+

@@ -1,33 +1,32 @@
 <% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="col-md-4 col-md-offset-8">
-    <section class="user_info">
-        <h1>
+<!---------------------------------------------------       -------------------->
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-8">
+      <h1>
           <%= gravatar_for @user %>
           <%= @user.name %>
         </h1>
-        </section>
-    </aside>
-</div>    
-
-
-<div class="row">
-  <aside class="col-md-4 col-md-offset-7" style="margin-top: 5px; text-align: right;">
-        <p style=" padding-bottom: 20px; border-top: 1px solid #eaeaea; font-size: 1.4em;">
+    </div>
+  </div>
+    
+  <div class="row">
+    <div class="col-md-3 col-md-offset-8">
+      <p style="border-top: 1px solid #eaeaea; font-size: 1.4em;">
           شهر: <%= @user.city %>
           <br>
           مهارت: <%= @user.work %>
           <br>
           سابقه استارتاپی: <%= @user.exp %>
         </p>
-</aside>
-
-<div class="row">
-  <aside class="col-md-4 col-md-offset-3" style="margin-top: -170px;">
-    <h3>درباره من</h3>
-        <p id="about">
-          <%= @user.about %>
+    </div>
+    <div class="col-md-5 col-md-offset-5">
+      <h3>درباره من </h3>
+        <p style="font-size: 1.2em;" id="about">
+          <%= raw(@user.about) %>
         </p>
- </aside>
-
+    </div>
+  </div>
 </div>
