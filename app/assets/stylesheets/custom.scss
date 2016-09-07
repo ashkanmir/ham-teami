@@ -147,6 +147,20 @@ footer ul li {
   margin-left: 15px;
 }
 
+.checkbox {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: normal;
+  span {
+    margin-right: 20px;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-right: 0;
+}
+
 /* homepgae backgound*/
 
 #bg{
