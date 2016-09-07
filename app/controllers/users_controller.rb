@@ -10,11 +10,16 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)  
     if @user.save
+      log_in @user
       flash[:success] = "به هم تیمی خوش اومدی! به راحتی میتونی یه همکار خوب اینجا پیدا کنی!"
       redirect_to @user
     else
       render 'new'
     end
+  end
+  
+  def destroy
+    
   end
   
   private

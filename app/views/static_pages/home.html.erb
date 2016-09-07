@@ -5,12 +5,13 @@
     <title><%= yield(:title) %></title>
   </head>
   <body>
+   
     
    <div class="container" id="bg">
-     <div class="row">
+     <div>
        <div  id="toprow">
-         <p style="color: #F8F8F8;">به هم تیمی خوش اومدی، همکار استارت آپت رو پیدا کن</p>
-         <h2 style="color: #F8F8F8;">اینجا توییت هم میتونی بکنی، و بقیه رو هم فالو کنی</h2>
+         <h1 style="color: #F8F8F8;">به هم تیمی خوش اومدی، همکار استارت آپت رو پیدا کن</h1>
+         <h3 class="lead" style="color: #F8F8F8; font-weight: none;">اینجا توییت هم میتونی بکنی، و بقیه رو هم فالو کنی</h3>
          <div style="margin-top: 40px;"><%= link_to "کار رو شروع کن!", signup_path , class: "btn btn-lg btn-primary" %></div>
        </div>
      </div>
@@ -18,33 +19,48 @@
     
     
     
-    <div class ="gray" style="padding-bottom: 20px; text-align: center;">
-      <h1>آسونترین و سریعترین راه برای پیدا کردن همکار و شروع استارت - آپ</h1>
+    <div class ="gray" >
+      <h2 class ="center title">آسونترین و سریعترین راه برای پیدا کردن همکار و شروع استارت - آپ</h2>
+      <p class= "center lead">شبکه بزرگی از طراح ها، برنامه نویسا، مارکترها و غیره</p>
     </div>
     
     
     <!-- 3 points -->
-    <div class="row three-points" style="text-align: center;">
+    <div class="row" id="three-points" style="text-align: center;">
       
-      <div class="col-lg-4">
+      <div class="col-lg-3">
+        <h2>توییت هم میتونی بکنی</h2>
+        <p>بچه میخواد با یتیمی بازی کنه بابا نمیذاره یتیم لباسش کثیفه چون که فقط یکی داره 
+        همه آگاهیم از این بلایا حتی فرشته هم نمیاد این ورا تا نشیم فنا با همین بلایا 
+        اما کمک نخواستیم اشک بریزه</p>
+    </div>
+      
+      <div class="col-lg-3">  
         <h2>استارت آپت رو شروع کن</h2>
-        <p>Sag Miri</p>
+        <p>بچه میخواد با یتیمی بازی کنه بابا نمیذاره یتیم لباسش کثیفه چون که فقط یکی داره 
+        همه آگاهیم از این بلایا حتی فرشته هم نمیاد این ورا تا نشیم فنا با همین بلایا 
+        اما کمک نخواستیم اشک بریزه</p>
       </div>
       
-      <div class="col-lg-4">
+      <div class="col-lg-3">
         <h2>هم تیمی خودت رو پیدا کن</h2>
-        <p>Sag Miri</p>
+        <p>بچه میخواد با یتیمی بازی کنه بابا نمیذاره یتیم لباسش کثیفه چون که فقط یکی داره 
+        همه آگاهیم از این بلایا حتی فرشته هم نمیاد این ورا تا نشیم فنا با همین بلایا 
+        اما کمک نخواستیم اشک بریزه</p>
       </div>
       
-      <div class="col-lg-4">
+      <div class="col-lg-3">
         <h2>به راحتی ثبت نام کن</h2>
-        <p>Sag Miri</p>
+        <p>بچه میخواد با یتیمی بازی کنه بابا نمیذاره یتیم لباسش کثیفه چون که فقط یکی داره 
+        همه آگاهیم از این بلایا حتی فرشته هم نمیاد این ورا تا نشیم فنا با همین بلایا 
+        اما کمک نخواستیم اشک بریزه</p>
       </div>
-      
+  
     </div>
     
     <script>
       $("#bg").css("height", $(window).height());
+      $("#bg").css("width", $(window).width());
     </script>
     
   </body>
