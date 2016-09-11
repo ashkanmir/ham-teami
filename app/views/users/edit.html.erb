@@ -1,10 +1,11 @@
-<% provide(:title, 'عضویت') %>
+<% provide(:title, "تنظیمات") %>
+ 
 <div id="sn">
-<h2 style="margin: 40px 0 20px 0;">میخوام هم تیمی پیدا کنم</h2>
+<h2 style="margin: 40px 0 20px 0;">تغییر اطلاعت</h2>
 
 <div class="row form-group">
   <div class="col-sm-4 col-sm-offset-4">
-    <%= form_for(@user, url: signup_path) do |f| %>
+    <%= form_for(@user) do |f| %>
     <%= render 'shared/error_messages' %>
     
     
@@ -46,4 +47,5 @@
     <% end %>
   </div>
 </div>
+
 </div>

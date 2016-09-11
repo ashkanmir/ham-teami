@@ -1,0 +1,38 @@
+<% provide(:title, 'همتیمی ها') %>
+
+<h2 style="text-align: right; padding: 15px 100px 0 0;">همتیمی ها</h2>
+
+
+
+<%= will_paginate %>
+
+</div>
+</div>
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-8 username">
+<ul class="users">
+  <% @users.each do |user| %>
+    <li>
+      <h4>
+        <%= gravatar_for user, size: 50 %>
+        <%= link_to user.name, user %>
+      </h4>
+      <% if current_user.admin? && !current_user?(user) %>
+     <%= link_to "delete", user, method: :delete,
+                                  data: { confirm: "آیا مطمئن به حذف کاربر هستید؟" } %> |
+  <% end %>
+        </br>
+    <div id="usersindex">
+        <%= user.city %>
+        </br>
+        <%= user.work %>
+      </div>
+    </li>
+  <% end %>
+</ul>
+
+</div>
+</div>
+
+<%= will_paginate %>

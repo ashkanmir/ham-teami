@@ -7,16 +7,15 @@
       </button>-->
       <nav>
         <ul class="nav navbar-nav navbar-right">
-          <li style="font-size: 1.2em"><%= link_to "درباره", "#three-points" %></li>        
         <% if logged_in? %>
-          <li style="font-size: 1.2em"><%= link_to "همتیمی ها", '#' %></li>
+          <li style="font-size: 1.2em"><%= link_to "همتیمی ها", users_path %></li>
           <li style="font-size: 1.2em" class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               اکانتم <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
               <li style="font-size: 1.2em, dir:rtl"><%= link_to "من", current_user %></li>
-              <li style="font-size: 1.2em"><%= link_to "تنظیمات", '#' %></li>
+              <li style="font-size: 1.2em"><%= link_to "تنظیمات", edit_user_path(current_user) %></li>
               <li class="divider"></li>
               <li style="font-size: 1.2em">
                 <%= link_to "خروج", logout_path, method: "delete" %>
@@ -24,6 +23,7 @@
             </ul>
           </li>
         <% else %>
+          <li style="font-size: 1.2em"><%= link_to "درباره", "#three-points" %></li> 
           <li style="font-size: 1.2em"><%= link_to "ورود", login_path %></li>
         <% end %>
       </ul>

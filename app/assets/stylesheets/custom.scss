@@ -180,15 +180,23 @@ footer ul li {
 
 
 .gray {
-  background-color: #F8F8F8;
+  
   padding: 5px 0 5px 0;
   width: 100%;
+  background-color: #7FCDCC
 }
 
 #three-points{
   padding: 30px 15px 30px 15px;
-  background-color: #7FCDCC;
+  background-color: #F8F8F8;
+}
 
+#hamkar{
+  
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  background-color: #7FCDCC
 }
 
 
@@ -269,9 +277,25 @@ input {
 }
 
 
+/* Users index */
 
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+    
+  }
+}
 
-
+#usersindex {
+  
+  margin: -35px 65px 0 0;
+  font-size: 1.2em;
+  color: #777;
+}
 
 
 

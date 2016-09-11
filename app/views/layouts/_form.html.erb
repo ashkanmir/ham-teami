@@ -1,10 +1,4 @@
-<% provide(:title, 'عضویت') %>
-<div id="sn">
-<h2 style="margin: 40px 0 20px 0;">میخوام هم تیمی پیدا کنم</h2>
-
-<div class="row form-group">
-  <div class="col-sm-4 col-sm-offset-4">
-    <%= form_for(@user, url: signup_path) do |f| %>
+<%= form_for(@user, url: signup_path) do |f| %>
     <%= render 'shared/error_messages' %>
     
     
@@ -34,7 +28,7 @@
       <i class="glyphicon glyphicon-comment"></i>
       <%= text_area(:user, :about, placeholder: "برنامه نویسی: مجرب در برنامه نویسی #C به روش OOP
 مستند سازی با استفاده از UML و آشنا با Net.ASP و Java.................")%>
-<%=  %>
+
 
       <% f.label :password %>
       <%= f.password_field :password, placeholder: "رمز عبور", class: 'form-control' %>
@@ -44,6 +38,3 @@
 
       <%= f.submit "ثبت نام", class: "btn btn-primary" %>
     <% end %>
-  </div>
-</div>
-</div>
