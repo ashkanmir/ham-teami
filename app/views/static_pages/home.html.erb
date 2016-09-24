@@ -5,16 +5,15 @@
     <title><%= yield(:title) %></title>
   </head>
   <body>
-   
     
+    
+ 
    <div class="container" id="bg">
-     <div>
        <div  id="toprow">
          <h1 style="color: #F8F8F8;">به هم تیمی خوش اومدی، همکار استارت آپت رو پیدا کن</h1>
-         <h3 class="lead" style="color: #F8F8F8; font-weight: none;">اینجا توییت هم میتونی بکنی، و بقیه رو هم فالو کنی</h3>
+         <h3 class="lead" style="color: #F8F8F8; font-weight: none;">اینجا توییت میتونی بکنی، فالو شی، فالو کنی و به هم تیمیت پیغام بدیی</h3>
          <div style="margin-top: 40px;"><%= link_to "کار رو شروع کن!", signup_path , class: "btn btn-lg btn-primary" %></div>
        </div>
-     </div>
   </div>
     
     
@@ -26,6 +25,7 @@
     
     
     <!-- 3 points -->
+    <div class="container-fluid">
     <div class="row" id="three-points" style="text-align: center;">
       
       <div class="col-lg-3">
@@ -33,7 +33,7 @@
         <p>بچه میخواد با یتیمی بازی کنه بابا نمیذاره یتیم لباسش کثیفه چون که فقط یکی داره 
         همه آگاهیم از این بلایا حتی فرشته هم نمیاد این ورا تا نشیم فنا با همین بلایا 
         اما کمک نخواستیم اشک بریزه</p>
-    </div>
+      </div>
       
       <div class="col-lg-3">  
         <h2>استارت آپت رو شروع کن</h2>
@@ -57,19 +57,20 @@
       </div>
   
     </div>
-    
+    </div>
     
     <!-- HAMKARI ------------------------------>
     
     <div id="hamkar">
       <h2 class="title" style="padding-top: 20px;">همکاری با هم تیمی</h2>
-      <p class="lead" style="font-size: 1.2em">اگه ایده ای داری یا میتونی کمکمون کنی حتما با ما در میون بذار، بیسبرانه منتظریم</p>
+      <p class="lead" style="font-size: 1.2em; color:black;">اگه ایده ای داری یا میتونی کمکمون کنی حتما با ما در میون بذار، بیسبرانه منتظریم<br /> ما به برنامه نویس، مارکتر، طراح و ..... احتیاج داریم</p>
       <div style="padding-bottom: 20px;"><%= link_to "ایملش کن!", signup_path , class: "btn btn-lg btn-primary" %></div>
     </div>
-    
+
+
+
     <script>
       $("#bg").css("height", $(window).height());
-      $("#bg").css("width", $(window).width());
     </script>
     
   </body>

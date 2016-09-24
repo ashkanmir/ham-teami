@@ -13,20 +13,43 @@
   </div>
     
   <div class="row">
-    <div class="col-md-3 col-md-offset-8">
-      <p  style="border-top: 1px solid #eaeaea; border-radius: 0%; font-size: 1.4em;">
+    
+    
+    <div class="col-md-6" style="margin-top: -55px;">
+        <% if @user.microposts.any? %>
+        <h3>توییت ها (<%= @user.microposts.count %>)</h3>
+        <ol class="microposts">
+        <%= render @microposts %>
+        </ol>
+        <%= will_paginate @microposts %>
+        <% end %>
+    </div>
+    
+    
+    <div class="col-md-6" style="padding-right: 110px;">
+      <div>
+        <p  style="border-top: 1px solid #eaeaea; border-radius: 0%; font-size: 1.4em;">
           شهر: <%= @user.city %>
           <br>
           مهارت: <%= @user.work %>
           <br>
           سابقه استارتاپی: <%= @user.exp %>
         </p>
-    </div>
-    <div class="col-md-5 col-md-offset-5">
-      <h3>درباره من </h3>
+        
+        <div>
+          <%= render 'shared/micropost_form' if current_page?(current_user) %>
+        </div>
+        
+        
+        <h3>درباره من </h3>
         <p style="font-size: 1.2em;" id="about">
           <%= raw(@user.about) %>
         </p>
+        
+      </div>
     </div>
+    
   </div>
 </div>
+
+  
